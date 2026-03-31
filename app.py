@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load data
-df = pd.read_csv("D:/coding/data_ges/Superstore.csv", encoding='latin1')
+df = pd.read_csv("Superstore.csv", encoding='latin1')
 
 st.title("Sales Dashboard")
 
