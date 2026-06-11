@@ -3,11 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load data
-df = pd.read_csv("penjualan_mobil.csv", encoding='latin1')
-
+df = pd.read_csv("penjualan_mobil.csv", sep=';', encoding='latin1')
+df.columns = df.columns.str.strip().str.lower()
 # Bersihkan kolom
-df.columns = df.columns.str.strip()
-
 st.write("Kolom di dataset:", df.columns)
 
 st.title("Sales Dashboard")
