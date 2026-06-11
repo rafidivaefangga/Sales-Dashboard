@@ -2,13 +2,12 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Load data
-df = pd.read_csv("Superstore.csv", sep=';', encoding='latin1')
+# Load data (tanpa sep=';')
+df = pd.read_csv("Superstore.csv", encoding='latin1', on_bad_lines='skip')
 
-# Rapihin nama kolom (biar ga error)
+# Rapihin kolom
 df.columns = df.columns.str.strip().str.lower()
 
-# Judul
 st.title("Sales Dashboard")
 
 # Total Sales
